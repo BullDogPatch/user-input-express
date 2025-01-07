@@ -17,6 +17,16 @@ const handleSubmit = (e) => {
   });
   console.log(message);
   form.reset();
+
+  const successMessage = document.querySelector('.success-message');
+  setTimeout(() => {
+    successMessage.textContent = 'Your message has been sent';
+    successMessage.style.display = 'block';
+  }, 100);
+
+  setTimeout(() => {
+    successMessage.style.display = 'none';
+  }, 2000);
 };
 
 form.addEventListener('submit', handleSubmit);
