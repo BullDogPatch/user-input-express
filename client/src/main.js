@@ -11,12 +11,12 @@ const handleSubmit = (e) => {
   fetch('http://localhost:8080/messages', {
     method: 'POST',
     headers: {
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ message }),
   });
+  console.log(message);
+  form.reset();
 };
 
 form.addEventListener('submit', handleSubmit);
